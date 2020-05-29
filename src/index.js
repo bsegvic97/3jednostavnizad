@@ -9,12 +9,21 @@ document.getElementById("app").innerHTML = `
 </div>
 `;
 var e = ["ovo", "je", "jedna", "jednostavna", "recenica"];
-var s = "";
-s = e[0].charAt(0).toUpperCase() + e[0].slice(1, e[0].length);
-s += " ";
-for (var i = 1; i < e.length; i++) {
-  s += e[i];
-  if (i === e.length - 1) s += ".";
-  else s += " ";
+function recenica(e)
+{
+  var s = "";
+  s = e[0].charAt(0).toUpperCase() + e[0].slice(1, e[0].length);
+  s += " ";
+  for (let i=1;i<e.length;i++)
+  {
+    s+=e[i];
+    if(i===e.length-1)
+      s+=".";
+    else
+      s+=" ";
+  }  
+  return s;
 }
-console.log(s);
+console.log(recenica(e));
+//Ovdje sam koristio proceduralnu programsku paradigmu cisto da ne bude uvijek imperativna, iako po meni nepotrebno definirirat funkciju za ovakav "zadacic"
+
