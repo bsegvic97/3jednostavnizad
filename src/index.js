@@ -9,21 +9,9 @@ document.getElementById("app").innerHTML = `
 </div>
 `;
 var e = ["ovo", "je", "jedna", "jednostavna", "recenica"];
-function recenica(e)
-{
-  var s = "";
-  s = e[0].charAt(0).toUpperCase() + e[0].slice(1, e[0].length);
-  s += " ";
-  for (let i=1;i<e.length;i++)
-  {
-    s+=e[i];
-    if(i===e.length-1)
-      s+=".";
-    else
-      s+=" ";
-  }  
-  return s;
-}
-console.log(recenica(e));
-//Ovdje sam koristio proceduralnu programsku paradigmu cisto da ne bude uvijek imperativna, iako po meni nepotrebno definirirat funkciju za ovakav "zadacic"
-
+var e = ["ovo", "je", "jedna", "jednostavna", "recenica"];
+let f=e.join(" ").concat(".");
+//Ovdje koristim dvije ugradene funkcije join i concat,join za dobiti string od danih rijeci, a concat za dodati tocku na kraju
+console.log(f.replace(f.charAt(0),f.charAt(0).toUpperCase()));
+//U ispisu koristim replace, za zamijeniti prvo slovo recenice, sa velikim slovom
+//Sve ovo je funkcionalna paradigma, opet koristena radi "ljepote"
